@@ -94,7 +94,7 @@ plot(yelp$logrev, yelp$stars)
 abline(m1, col = "red")
 ```
 
-![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 Interpretation: if a restaurant's star rating were to increase by 1, then the restaurant's logrev would increase by (1.73 \* 100)% = 173%.
 
@@ -143,7 +143,7 @@ plot(yelp$logrev, yelp$stars)
 abline(m2, col = "red")
 ```
 
-![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 Interpretation: Holding all control variables and state fixed effects constant, increasing the star rating by 1 will increase revenues by (1.72 \* 100)% = 172%.
 
@@ -198,7 +198,7 @@ plot(yelp$logrev, yelp$stars)
 abline(m3, col = "red")
 ```
 
-![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 Interpretation: Holding all control variables and state fixed effects constant, having a restaurant's score being rounded up will increasing will increase revenues by (1.65 \* 100)% = 165%.
 

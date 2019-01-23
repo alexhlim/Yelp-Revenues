@@ -47,7 +47,8 @@ Assumption:
 ```{r}
 m1 = lm(logrev ~ score, data = yelp)
 summary(m1)
-
+```
+```{r}
 plot(yelp$logrev, yelp$stars)
 abline(m1, col = "red")
 ```
@@ -70,7 +71,8 @@ Assumptions:
 # within -> fixed effects
 m2 = plm(logrev ~ stars, data=yelp, index=c('rest_id','time'), method = 'within', effect="individual")
 summary(m2)
-
+```
+```{r}
 plot(yelp$logrev, yelp$stars)
 abline(m2, col = "red")
 ```
@@ -96,10 +98,12 @@ yelp$roundedUp <-  ifelse(yelp$score %in% temp, 1, 0)
 # estimate treatment affect of restaurants recieving 0.5 star increment
 m3 = plm(logrev ~ factor(roundedUp) + score, data = yelp, index=c("rest_id","time"), method= "within",effect="individual")
 summary(m3)
-
+```
+```{r}
 plot(yelp$logrev, yelp$stars)
 abline(m3, col = "red")
 ```
+
 
 Interpretation: Holding all control variables and state fixed effects constant, having a restaurant's score being rounded up will increasing will increase revenues by (1.65 * 100)% = 165%.
 

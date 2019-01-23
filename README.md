@@ -15,42 +15,10 @@ Variables: **logrev**: log of the revenue **score**: average of user's reviews *
 library(ggplot2)
 library(stats)
 library(sm)
-```
-
-    ## Package 'sm', version 2.2-5.6: type help(sm) for summary information
-
-``` r
 library(sandwich)
 library(lmtest)
-```
-
-    ## Loading required package: zoo
-
-    ## 
-    ## Attaching package: 'zoo'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     as.Date, as.Date.numeric
-
-``` r
 library(plm)
-```
-
-    ## Loading required package: Formula
-
-``` r
 library(MASS)
-```
-
-    ## 
-    ## Attaching package: 'MASS'
-
-    ## The following object is masked from 'package:sm':
-    ## 
-    ##     muscle
-
-``` r
 library(nlme)
 
 # removes any global environment variables

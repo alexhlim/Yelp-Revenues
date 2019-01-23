@@ -9,7 +9,8 @@ All things being equal, does an additional star on yelp increase business, and b
 
 I have a dataset that is provided by yelp containing 15,000 different restaurants and the scores they currently have on yelp. In this project, I attempt to understand the relationship between score and revenue by using linear regression. I start with the simple linear regression model, then try more complex models such as panel data, while adding more assumptions to make it more rigorous and closer to real life.
 
-Variables: **logrev**: log of the revenue  
+## Variables    
+**logrev**: log of the revenue  
 **score**: average of user's reviews  
 **stars**: number of stars on yelp  
 **rest\_id**: restaruant id  

@@ -36,7 +36,7 @@ Naive regression, regress revenue on stars:
 
 logrev = β\_0 + β\_1 score + U\_it
 
-Assumption:  
+**Assumption**:  
 1) E(U|stars) = 0  
 
 ``` r

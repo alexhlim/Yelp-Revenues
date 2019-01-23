@@ -36,7 +36,8 @@ Naive regression, regress revenue on stars:
 
 logrev = β\_0 + β\_1 score + U\_it
 
-Assumption: 1) E(U|stars) = 0
+Assumption:  
+1) E(U|stars) = 0  
 
 ``` r
 m1 = lm(logrev ~ score, data = yelp)
@@ -69,9 +70,9 @@ abline(m1, col = "red")
 
 ![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
-Interpretation: if a restaurant's star rating were to increase by 1, then the restaurant's logrev would increase by (1.73 \* 100)% = 173%.
+**Interpretation**: if a restaurant's star rating were to increase by 1, then the restaurant's logrev would increase by (1.73 \* 100)% = 173%.
 
-OVB (Omitted Variable Bias):
+**OVB (Omitted Variable Bias)**:
 
 Stars are most likely a function composed of the quality of the food as well as the price. People are more likely to judge quality relative to the price they pay.
 
@@ -79,7 +80,9 @@ Let's rewrite regression using panel data:
 
 logrev = α\_i + α\_t + β score\_it + U\_it
 
-Assumptions: 1) E(U\_it|stars\_it) = 0 AND E(U\_it|stars\_i1, ..., stars\_iT, α\_i) = 0 2) Strict exogenity, no feedback from U\_it and score across time.
+**Assumptions**:   
+1) E(U\_it|stars\_it) = 0 AND E(U\_it|stars\_i1, ..., stars\_iT, α\_i) = 0  
+2) Strict exogenity, no feedback from U\_it and score across time.  
 
 ``` r
 # within -> fixed effects
@@ -118,7 +121,7 @@ abline(m2, col = "red")
 
 ![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-Interpretation: Holding all control variables and state fixed effects constant, increasing the star rating by 1 will increase revenues by (1.72 \* 100)% = 172%.
+**Interpretation**: Holding all control variables and state fixed effects constant, increasing the star rating by 1 will increase revenues by (1.72 \* 100)% = 172%.
 
 Other factors might affect the revenue (OVB). To enforce causality, we need to show that rounding scores up affects the revenue. Yelp rounds scores to the nearest half star. For example, when a user searches for 4 star restaruant, only scores with 3.75 and above will show; if it is 3.74 it will round down to 3.5 stars. Thus, we define a binary variable *roundedUp* that denotes restaurants that is 1 when the score is rounded up, otherwise, it is rounded down.
 
@@ -173,7 +176,7 @@ abline(m3, col = "red")
 
 ![](yelp-notebook_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
-Interpretation: Holding all control variables and state fixed effects constant, having a restaurant's score being rounded up will increasing will increase revenues by (1.65 \* 100)% = 165%.
+**Interpretation**: Holding all control variables and state fixed effects constant, having a restaurant's score being rounded up will increasing will increase revenues by (1.65 \* 100)% = 165%.
 
 Conclusion
 ==========

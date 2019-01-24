@@ -1,13 +1,13 @@
 Overview
 ========
 
-Often times, I find myself going on Yelp searching for the newest and highest rating restaurant in my area. I always look for resturants that are rated 4 and above, and usually when I see a score less than 4, I do not consider it in my list of potential restaurants. This made me wonder, how are these ratings affecting business for these restaurants. If most people are like myself, it must have tremondous impact on their revenue.
+Yelp boasts of about 145 million unique users a month, which is around the population of Russia! This makes Yelp one of most popular apps and sites for consumer to go to and for good reason. The site consists primarily of reviews created by consumers like ourselves! The majority of people have started to look towards Yelp to search for the newest and highest rating restaurant in an area.  
 
-The question I am interested in is then:
+I personally always look for restaurants that are rated four stars and above, immediately dismissing the four stars and below options. And I know I am not the only one who does this. So, how are these ratings, created by consumers like me, affect business for these restaurants? We have a lot more control and a tremendous impact on their revenue stream.
+The question I am interested in is then:  
 
-All things being equal, does an additional star on yelp increase business, and by how much?
-
-I have a dataset that is provided by yelp containing 15,000 different restaurants and the scores they currently have on yelp. In this project, I attempt to understand the relationship between score and revenue by using linear regression. I start with the simple linear regression model, then try more complex models such as panel data, while adding more assumptions to make it more rigorous and closer to real life.
+All else being equal, what is the marginal effect of an additional star on Yelp on business’ income? And by what amount?
+Yelp provided a dataset containing 15,000 different restaurants and their corresponding scores on Yelp. In this project, I attempt to understand the relationship between score and revenue using linear regression. I start with the simple linear regression model, then move towards more complex models such as panel data, while adding more assumptions to increase the rigor and to mimic what we experience in the real world.  
 
 ## Variables    
 **logrev**: log of the revenue  
@@ -181,7 +181,7 @@ abline(m3, col = "red")
 Conclusion
 ==========
 
-We started by asking the question of how does yelp ratings affect revenue. Our solution provided us with the information that having a restaurant's score being rounded up on Yelp will increase revenues by 165%! Although this may be a large number, and might not be completely accurate, it does confirm with us that indeed Yelp does affect business revenue. So next time you are on Yelp, and are searching for restaurant's, remember that you are impacting their business!
+I started this project asking the question of how does Yelp ratings affect businesses’ revenue. The results provided us with the information that having a restaurant's score being rounded up on Yelp will increase revenues by 165%! This a rather large number and might not completely apply to every situation, but it does the fact that Yelp ratings do affect business revenue. So the next time you are on Yelp searching for restaurant's, remember that you are impacting their business!  
 
 Ways to Improve
 ---------------
